@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1060</width>
+    <height>1000</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GOGOGO</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(246, 248, 254);</string>
+  </property>
+  <widget class="QPushButton" name="pushButton_send">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>20</y>
+     <width>100</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(94, 55, 255);
+color: rgb(255, 255, 255);
+border-radius: 25px;</string>
+   </property>
+   <property name="text">
+    <string>送出</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_county">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>250</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(31, 38, 65);
+border-radius: 15px;
+padding: 15px; </string>
+   </property>
+   <property name="insertPolicy">
+    <enum>QComboBox::InsertAtBottom</enum>
+   </property>
+   <property name="frame">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_town">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>20</y>
+     <width>250</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(31, 38, 65);
+border-radius: 15px;
+padding: 15px; </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="weather_today_day">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>149</y>
+     <width>240</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(31, 38, 65);
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+   <property name="margin">
+    <number>15</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="weather_today_night">
+   <property name="geometry">
+    <rect>
+     <x>27</x>
+     <y>359</y>
+     <width>240</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(31, 38, 65);
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+   <property name="margin">
+    <number>15</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="weather_tomorrow_day">
+   <property name="geometry">
+    <rect>
+     <x>27</x>
+     <y>569</y>
+     <width>240</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(31, 38, 65);
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+   <property name="margin">
+    <number>15</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="place_01_title">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>95</y>
+     <width>740</width>
+     <height>290</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(94, 55, 255);
+color: rgb(255, 255, 255);
+border-radius: 20px;</string>
+   </property>
+   <property name="text">
+    <string>景點01</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+   <property name="margin">
+    <number>15</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="weather_today_night_title_2">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>310</y>
+     <width>70</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(31, 38, 65);</string>
+   </property>
+   <property name="text">
+    <string>晚上</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+   <property name="margin">
+    <number>15</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="weather_tomorrow_day_title">
+   <property name="geometry">
+    <rect>
+     <x>27</x>
+     <y>520</y>
+     <width>240</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(31, 38, 65);
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;</string>
+   </property>
+   <property name="text">
+    <string>日期</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+   <property name="margin">
+    <number>15</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="place_02_title">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>395</y>
+     <width>740</width>
+     <height>290</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(94, 55, 255);
+color: rgb(255, 255, 255);
+border-radius: 20px;</string>
+   </property>
+   <property name="text">
+    <string>景點02</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+   <property name="margin">
+    <number>15</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="place_03_title">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>695</y>
+     <width>740</width>
+     <height>290</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(94, 55, 255);
+color: rgb(255, 255, 255);
+border-radius: 20px;</string>
+   </property>
+   <property name="text">
+    <string>景點03</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+   <property name="margin">
+    <number>15</number>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="place_01_GO">
+   <property name="geometry">
+    <rect>
+     <x>935</x>
+     <y>320</y>
+     <width>80</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(31, 38, 65);
+color: rgb(255, 255, 255);
+border-radius: 15px;</string>
+   </property>
+   <property name="text">
+    <string>GO !</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="place_02_GO">
+   <property name="geometry">
+    <rect>
+     <x>935</x>
+     <y>620</y>
+     <width>80</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(31, 38, 65);
+color: rgb(255, 255, 255);
+border-radius: 15px;</string>
+   </property>
+   <property name="text">
+    <string>GO !</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="place_03_GO">
+   <property name="geometry">
+    <rect>
+     <x>935</x>
+     <y>920</y>
+     <width>80</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(31, 38, 65);
+color: rgb(255, 255, 255);
+border-radius: 15px;</string>
+   </property>
+   <property name="text">
+    <string>GO !</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_time">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>100</y>
+     <width>240</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(31, 38, 65);
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+padding-left: 20px;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="weather_today_day_title">
+   <property name="geometry">
+    <rect>
+     <x>133</x>
+     <y>100</y>
+     <width>70</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(31, 38, 65);</string>
+   </property>
+   <property name="text">
+    <string>白天</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+   <property name="margin">
+    <number>15</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="weather_today_night_title">
+   <property name="geometry">
+    <rect>
+     <x>27</x>
+     <y>310</y>
+     <width>240</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(31, 38, 65);
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;</string>
+   </property>
+   <property name="text">
+    <string>日期</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+   <property name="margin">
+    <number>15</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="weather_tomorrow_day_title_2">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>520</y>
+     <width>70</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(31, 38, 65);</string>
+   </property>
+   <property name="text">
+    <string>白天</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+   <property name="margin">
+    <number>15</number>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="place_01_content_2">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>305</y>
+     <width>610</width>
+     <height>65</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(94, 55, 255);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="place_01_content">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>160</y>
+     <width>610</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(94, 55, 255);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAsNeeded</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>140</y>
+     <width>70</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>簡介</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>285</y>
+     <width>140</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>交通資訊</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>440</y>
+     <width>70</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>簡介</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="place_02_content_2">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>605</y>
+     <width>610</width>
+     <height>65</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(94, 55, 255);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>585</y>
+     <width>140</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>交通資訊</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="place_02_content">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>460</y>
+     <width>610</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(94, 55, 255);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAsNeeded</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>740</y>
+     <width>70</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>簡介</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="place_03_content_2">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>905</y>
+     <width>610</width>
+     <height>65</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(94, 55, 255);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>885</y>
+     <width>140</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>交通資訊</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="place_03_content">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>760</y>
+     <width>610</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(94, 55, 255);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAsNeeded</enum>
+   </property>
+  </widget>
+  <zorder>weather_today_night_title</zorder>
+  <zorder>comboBox_time</zorder>
+  <zorder>pushButton_send</zorder>
+  <zorder>comboBox_county</zorder>
+  <zorder>comboBox_town</zorder>
+  <zorder>weather_today_day</zorder>
+  <zorder>weather_today_night</zorder>
+  <zorder>weather_tomorrow_day</zorder>
+  <zorder>place_01_title</zorder>
+  <zorder>weather_today_night_title_2</zorder>
+  <zorder>weather_tomorrow_day_title</zorder>
+  <zorder>place_02_title</zorder>
+  <zorder>place_03_title</zorder>
+  <zorder>place_02_GO</zorder>
+  <zorder>place_03_GO</zorder>
+  <zorder>weather_today_day_title</zorder>
+  <zorder>weather_tomorrow_day_title_2</zorder>
+  <zorder>place_01_GO</zorder>
+  <zorder>place_01_content_2</zorder>
+  <zorder>place_01_content</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_3</zorder>
+  <zorder>place_02_content_2</zorder>
+  <zorder>label_4</zorder>
+  <zorder>place_02_content</zorder>
+  <zorder>label_5</zorder>
+  <zorder>place_03_content_2</zorder>
+  <zorder>label_6</zorder>
+  <zorder>place_03_content</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
